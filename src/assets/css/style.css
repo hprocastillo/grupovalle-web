@@ -948,6 +948,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet {
+  margin-right: 10px;
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -960,6 +961,9 @@ section {
 }
 
 @media (max-width: 767px) {
+  .swiper-pagination{
+    margin-right: 10px;
+  }
   .testimonials .testimonial-wrap {
     padding-left: 0;
   }
