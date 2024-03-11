@@ -1,0 +1,117 @@
+<div class="container">
+
+  <div class="section-title" data-aos="fade-up">
+    <h2>Contáctanos</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="contact-about">
+        <h3>Grupo Valle</h3>
+        <p>Comunícate con nosotros a través del formulario o escríbenos directamente a nuestro canal de WhatsApp.
+          También puedes visitar nuestras redes sociales.</p>
+        <div class="social-links">
+
+          <a
+            class="whastapp"
+            target="_blank"
+            href="https://wa.me/51985360234?text=Hola%20tengo%20una%20consulta%20que%20realizar%20..."
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="twitter"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+      <div class="info">
+        <div>
+<!--          <a class="text-dark" target="_blank" href="https://www.google.com/maps/place/Jr.+Tambo+Real+223,+Lima+15054/">-->
+            <i class="ri-map-pin-line"></i>
+            <p> Jirón tambo real 223, Int 505<br>Chorrillos - Lima </p>
+<!--          </a>-->
+        </div>
+
+        <div>
+          <a class="text-dark" target="_blank" href="mailto:contacto@grupovalle.pe">
+            <i class="ri-mail-send-line"></i>
+            <p>contacto&#64;grupovalle.pe</p>
+          </a>
+        </div>
+
+        <div>
+          <a class="text-dark" target="_blank" href="tel:+51948162010">
+            <i class="ri-phone-line"></i>
+            <p>+51 948 162 010</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+      <form [formGroup]="requestForm" (ngSubmit)="sendRequest()" class="contact-form">
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="fullName"
+            placeholder="Nombre completo"
+            required>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Correo electrónico"
+            required>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="tel"
+            class="form-control"
+            formControlName="phone"
+            placeholder="Teléfono de contacto"
+            required>
+        </div>
+
+        <div class="form-group">
+                        <textarea
+                          class="form-control text-muted"
+                          formControlName="content"
+                          rows="5"
+                          placeholder="¿Cúal es tu consulta?" value="¿Cúal es tu consulta?"
+                          required></textarea>
+        </div>
+
+        <div class="my-3">
+          @if (messageFormType === 'success') {
+            <div class="alert alert-success" role="alert">
+              {{ messageFormContent }}
+            </div>
+          } @else if (messageFormType === 'warning') {
+            <div class="alert alert-warning" role="alert">
+              {{ messageFormContent }}
+            </div>
+          } @else if (messageFormType === 'danger') {
+            <div class="alert alert-danger" role="alert">
+              {{ messageFormContent }}
+            </div>
+          }
+        </div>
+
+        <div class="text-center">
+          <button type="submit">Enviar consulta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

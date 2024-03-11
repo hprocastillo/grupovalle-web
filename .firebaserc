@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "grupovalle-sistemas": {
+      "hosting": {
+        "grupovalle-web": [
+          "grupovalle-sistemas"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "grupovalle-sistemas"
+  }
+}
