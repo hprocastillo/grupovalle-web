@@ -1,10 +1,14 @@
 import {Routes} from '@angular/router';
 import {HomeComponent} from "./components/home/home.component";
 import {Page404Component} from "./components/page404/page404.component";
+import {HproComponent} from "./components/hpro/hpro.component";
 
 export const routes: Routes = [
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'hpro', component: HproComponent
   },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
